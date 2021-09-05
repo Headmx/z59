@@ -3,9 +3,7 @@ question = 'y'
 while question == 'y' :
     number1 = float(input(' '))
     operation = input(' ')
-    temporary = number1
     while True:
-        number1 = temporary
         number2 = float (input(' '))
         if operation == '/' and number2 == 0:
             print ('на ноль делить нельзя!')
@@ -26,6 +24,7 @@ while question == 'y' :
             print (temporary)
             break
         else:
+            number1 = temporary
             continue    
     question = input ('продолжаем y/n ? ')
     if question == 'y':
