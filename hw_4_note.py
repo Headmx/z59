@@ -9,15 +9,6 @@ while step:
     elif step == '0':
         print ('Спасибо, до свидания!')
         break       
-    elif step == '3':
-        del_elem = int(input(' введите номер задачи: '))
-        long_note = int(len(notebook))
-        if del_elem in notebook.keys():
-            del notebook[del_elem]
-            for key, value in notebook.items():
-                print (key,value)
-        else:
-            print ('Нет такого элемента! попробуйте снова')
     elif step == '2':
         for step in '2':
             add_key = int(input('присвойте номер записи:'))
@@ -29,6 +20,15 @@ while step:
                 notebook[add_key] = add_value
                 for key, value in notebook.items():
                     print (key,value)
+    elif step == '3':
+        del_elem = int(input(' введите номер задачи: '))
+        long_note = int(len(notebook))
+        if del_elem in notebook.keys():
+            del notebook[del_elem]
+            for key, value in notebook.items():
+                print (key,value)
+        else:
+            print ('Нет такого элемента! попробуйте снова')
     elif step == '4':
         change_value = int(input('введите номер записи:'))
         notebook[change_value] = input('Введите новое значение:')
