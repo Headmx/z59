@@ -102,9 +102,7 @@ def elem_merge(list):
     i = 0
     for i in range(len(list)):
         if list[i] in list_low:
-            if i == " ":
-                new_index = list_low.index(list[i+1])
-                new_list=new_list + list_up[new_index]
+            if list[i] == " ":
                 i+=1
                 continue
             new_list = new_list + list[i]
