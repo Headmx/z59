@@ -1,3 +1,4 @@
+import string
 def sum_recursive(list):
     if list == []:
         return 0
@@ -25,22 +26,32 @@ def sum_number_rec (number):
 
 print(sum_number_rec(input('write number:')))
 
-# пока не понял как сделать 
-def negatives_rec(list):
+def negatives_rec(string1):
     count = 0
-    if len(list) == 1:
-        if int(list[0]) < 0:
-            count = count +1
-            return count
-        else:
-            return count
-    else:
-        return count + negatives_rec([list[1:]])
+    if string1 == []:
+        return 0    
+    if string1[0]<0:
+        count = count +1
+    return count + negatives_rec(string1[1:])
     
-#print (negatives_rec([1,-5,2,33,-7,0,-9,123,798,-88]))
+print (negatives_rec([-5,-5,2,33,-7,0,-9,123,798,-88]))
 
+def is_prime (number):
+    for i in range(2,int(delitel**0,2) +1):
+        if number%i == 0:
+            return False
+        return True
 
+def in_prime_rec (number, delitel):
+    if number == 2 or delitel >= number**0.5:
+        return True
+    if number % 2 == 0:
+        return False
+    if number % delitel == 0:
+        return False
+    return in_prime_rec (number, delitel+2)
 
+print (in_prime_rec(997,5))
 
 
 
