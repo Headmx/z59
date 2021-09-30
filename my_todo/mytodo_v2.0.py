@@ -1,11 +1,11 @@
 
-print ('Записная приветствует Вас')
+print('Записная приветствует Вас')
 import json
 todos = {}
 
 def decor_continue_y_n(func):
-    def wrap(*args,**kwargs):
-        result = func (*args, **kwargs)
+    def wrap(*args, **kwargs):
+        result = func(*args, **kwargs)
         while True:    
             y = input('желаете продолжить? (y/n) ')
             if y in ('y', 'Y'):
